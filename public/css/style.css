@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.ui {
+  position: absolute;
+  top: 10px;
+  z-index: 100;
+  font-family: 'Open Sans', sans-serif;
+}
+.ui#user-navigation {
+  right: 10px;
+}
+.ui#color-picker {
+  left: 46px;
+}
+.ui ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ui a {
+  font-size: 13px;
+  background: #fff;
+  color: #3c4e5a;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #bbb;
+  padding: 10px;
+  text-decoration: none;
+}
+.ui a:hover {
+  background: #ecf5fa;
+}
+.ui a:active {
+  background: #3887be;
+  border-color: #3887be;
+  color: #fff;
+}
+.ui li.user a {
+  min-width: 138px;
+  border-bottom-width: 0;
+}
+.ui li.user:last-child a {
+  border-bottom-width: 1px;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+.ui li.user:first-child a {
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+.ui li.color {
+  display: inline-block;
+}
+.ui li.color a {
+  border-right-width: 0;
+  height: 42px;
+  overflow: hidden;
+  padding: 5px 10px;
+}
+.ui li.color:last-child a {
+  border-right-width: 1px;
+  -webkit-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+}
+.ui li.color:first-child a {
+  border-left-width: 1px;
+  -webkit-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+}

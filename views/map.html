@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Mapper</title>
+        <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+
+        <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.js'></script>
+        <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.css' rel='stylesheet' />
+
+        <script src='/js/lib/doT/doT.min.js'></script>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+    <body>
+        <div id="color-picker" class="ui"></div>
+        <div id="user-navigation" class="ui">
+            <ul></ul>
+        </div>
+        <div id="map" data-map-id="{{=it.id}}" data-mapbox-id="{{=it.mapboxId}}" data-user-id="{{=it.userid}}"></div>
+
+        <script src="/js/main.js"></script>
+    </body>
+</html>

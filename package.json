@@ -1,0 +1,23 @@
+{
+  "name": "mapper",
+  "version": "0.0.1",
+  "description": "Look at maps together",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "map"
+  ],
+  "author": "Jens Nilsson <jens@jensnilsson.nu>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.3.0",
+    "dot": "^1.0.2",
+    "consolidate": "^0.10.0",
+    "cookie": "^0.1.2",
+    "cookie-parser": "^1.1.0",
+    "node-uuid": "^1.4.1",
+    "body-parser": "^1.2.0"
+  }
+}
