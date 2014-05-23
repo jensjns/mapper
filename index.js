@@ -167,22 +167,25 @@ app.get('/api/map/:id/geojson', function(req, res) {
 
         for(var i = 0, ii = keys.length; i < ii; i++) {
 
-            var feature = {
-                type: 'Feature',
-                geometry: {
-                    type: 'Point',
-                    coordinates: maps[req.params.id].users[keys[i]].point
-                },
-                properties: {
-                    color: users[keys[i]].color,
-                    name: users[keys[i]].name
-                }
-            };
+            if( typeof users[keys[i]] != 'undefined' ) {
+                var feature = {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: maps[req.params.id].users[keys[i]].point
+                    },
+                    properties: {
+                        color: users[keys[i]].color,
+                        name: users[keys[i]].name
+                    }
+                };
 
-            // only add features that has coordinates and is not the current users own feature
-            if( keys[i] != req.cookies.userid && feature.geometry.coordinates.length == 2 ) {
-                featureCollection.features.push(feature);
+                // only add features that has coordinates and is not the current users own feature
+                if( keys[i] != req.cookies.userid && feature.geometry.coordinates.length == 2 ) {
+                    featureCollection.features.push(feature);
+                }
             }
+
         }
 
         res.send(featureCollection);
